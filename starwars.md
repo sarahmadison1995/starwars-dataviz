@@ -109,3 +109,12 @@ ggplot(starwars, aes(x = mass, fill = sex)) +
 ![](starwars_files/figure-gfm/cat-cat-1.png)<!-- -->
 
 ### Pick two numerical variables and two categorical variables and make a visualisation that incorportes all of them and provide an interpretation with your answer.
+
+``` r
+ggplot(starwars, aes(x = birth_year, y = mass, color = eye_color)) + 
+  geom_point() + facet_grid(~sex)
+```
+
+    ## Warning: Removed 51 rows containing missing values (geom_point).
+
+![](starwars_files/figure-gfm/multi-1.png)<!-- -->

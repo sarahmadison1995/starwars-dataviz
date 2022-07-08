@@ -76,5 +76,7 @@ ggplot(starwars, aes(x = mass, fill = sex)) +
 ### Pick two numerical variables and two categorical variables and make a visualisation that incorportes all of them and provide an interpretation with your answer.
 
 ```{r multi}
+ggplot(starwars, aes(x = birth_year, y = mass, color = eye_color)) + 
+  geom_point() + facet_grid(~sex)
 
 ```
